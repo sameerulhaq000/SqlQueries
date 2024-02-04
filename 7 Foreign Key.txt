@@ -1,0 +1,41 @@
+-- Foreign Key
+
+CREATE TABLE dept(
+	dept_id INT PRIMARY KEY,
+    dept_name VARCHAR(50)
+);
+
+INSERT INTO dept
+(dept_id, dept_name)
+VALUES
+(101, "English"),
+(102, "IT");
+
+
+SELECT * FROM dept;
+
+CREATE TABLE teacher(
+	teacher_id INT PRIMARY KEY,
+    teacher_name VARCHAR(50),
+    dept_id INT,
+    FOREIGN KEY (dept_id) references dept(dept_id)
+    ON UPDATE CASCADE
+    ON DELETE CASCADE
+);
+
+
+INSERT INTO teacher
+(teacher_id, teacher_name, dept_id)
+VALUES
+(101, "Adam", 101),
+(102, "Eve", 102);
+
+
+-- if we update value it will automatically update on our primary table
+
+UPDATE dept 
+SET dept_id = 103
+WHERE dept_id = 102;
+
+
+SELECT * FROM teacher;

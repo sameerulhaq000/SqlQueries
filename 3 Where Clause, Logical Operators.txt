@@ -1,0 +1,54 @@
+-- where clause
+SELECT name, marks 
+FROM student 
+where marks > 80;
+
+SELECT * 
+FROM student 
+where marks+10 > 100;
+
+SELECT * 
+FROM student 
+where marks =  93;
+
+SELECT * 
+FROM student 
+where marks =  93;
+
+SELECT * 
+FROM student 
+where city = "Mumbai";
+
+-- logical operator
+
+-- AND
+SELECT *
+FROM student
+WHERE marks = 93 AND city = "Mumbai";
+
+-- OR
+SELECT *
+FROM student
+WHERE marks > 93 OR city = "Mumbai";
+
+-- BETWEEN
+SELECT *
+FROM student
+WHERE marks BETWEEN 80 AND 90;
+
+-- IN
+SELECT *
+FROM student
+WHERE city IN ("Karachi", "Pune", "Dehli");
+
+-- NOT IN
+SELECT *
+FROM student
+WHERE city NOT IN ("Mumbai", "Dehli");
+
+-- limit clause
+
+SELECT *
+FROM student
+WHERE marks > 75
+LIMIT 3;

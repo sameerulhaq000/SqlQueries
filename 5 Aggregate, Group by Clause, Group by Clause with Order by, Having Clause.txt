@@ -1,0 +1,45 @@
+-- Aggregate functions
+
+SELECT * FROM student;
+
+SELECT AVG(marks)
+FROM student;
+
+SELECT COUNT(rollno)
+FROM student;
+
+SELECT SUM(marks)
+FROM student;
+
+
+==============================================
+
+-- Group By Clause
+
+SELECT city, COUNT(rollno)
+FROM student
+GROUP BY city;
+
+SELECT city, AVG(marks)
+FROM student
+GROUP BY city;
+
+==============================================
+
+-- Group by Clause with Order by
+
+
+SELECT city, AVG(marks)
+FROM student
+GROUP BY city
+ORDER BY AVG(marks);
+
+
+==============================================
+
+-- Having Clause (used to apply condition on GROUPS)
+
+SELECT city, Count(rollno)
+FROM student 
+GROUP BY city
+HAVING MAX(marks) > 90;

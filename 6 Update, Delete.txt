@@ -1,0 +1,35 @@
+-- Update Queries
+
+select * from student;
+
+SET SQL_SAFE_UPDATES = 0;
+
+UPDATE student
+SET grade = "O"
+WHERE grade = "A";
+
+UPDATE student
+SET marks = 82
+where name = "emanuel";
+
+UPDATE student
+SET grade = "B"
+WHERE marks>80 AND marks < 91;
+
+UPDATE student 
+SET marks = marks + 1;
+
+UPDATE student
+set marks = 12
+where rollno = 105;
+
+============================================================
+
+-- DELETE Queries
+
+select * from student;
+
+DELETE FROM student
+WHERE marks <= 33;
+
+

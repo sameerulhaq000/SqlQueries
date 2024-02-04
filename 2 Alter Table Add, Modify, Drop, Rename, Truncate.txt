@@ -1,0 +1,26 @@
+-- Alter table used to add, modify, drop and rename columns, Truncate
+
+
+-- ADD
+ALTER TABLE student
+ADD COLUMN age INT NOT NULL DEFAULT 19;
+
+-- MODIFY
+ALTER TABLE student
+MODIFY COLUMN age VARCHAR(2); -- In modify we can change Datatype of the column
+
+
+-- Rename Column name
+ALTER TABLE student
+CHANGE age std_age INT;
+
+-- DROP
+ALTER TABLE student
+DROP COLUMN std_age;
+
+-- Truncate
+TRUNCATE TABLE student; -- used to delete all data of tables rows
+
+
+-- Select to check
+SELECT * FROM  student;

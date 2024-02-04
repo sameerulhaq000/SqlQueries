@@ -1,0 +1,18 @@
+-- SUB QUERIES
+
+SELECT * FROM student;
+
+SELECT AVG(marks)
+FROM student;
+
+SELECT name, marks
+FROM student
+WHERE marks > (SELECT AVG(marks) FROM student);
+
+select rollno 
+from student
+where rollno % 2 = 0;
+
+select name, rollno
+from student
+where rollno IN (select rollno from student where rollno % 2 = 0);

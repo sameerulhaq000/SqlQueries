@@ -1,0 +1,10 @@
+-- order by clause
+
+SELECT *
+FROM student
+order by grade ASC;
+
+SELECT *
+FROM student
+order by marks DESC
+LIMIT 3;
